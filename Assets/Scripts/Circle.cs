@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MyUtils;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +16,7 @@ public class Circle : MonoBehaviour
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        transform.parent.position = ScreenBoundaries.GetScreenBoundaries(0, 0, -1, 2);
     }
 
     private void Update()
@@ -23,12 +25,14 @@ public class Circle : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            transform.RotateAround(_rotPoint.position, Vector3.forward, _rotationSpeed * Time.deltaTime);
-        }
+            Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 direction = Vector3.forward;
 
-        if (Input.GetMouseButton(1))
-        {
-            transform.RotateAround(_rotPoint.position, Vector3.back, _rotationSpeed * Time.deltaTime);
+            if (touchPos.x > 0)
+            {
+                direction = Vector3.back;
+            }
+            transform.RotateAround(_rotPoint.position, direction, _rotationSpeed * Time.deltaTime);
         }
     }
 
