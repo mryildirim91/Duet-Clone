@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     private bool _isGameOver;
+    [SerializeField]private UnityEvent _gameOverEvent;
 
     private void Awake()
     {
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _isGameOver = true;
+        _gameOverEvent?.Invoke();
     }
 
     public void RestartGame()
