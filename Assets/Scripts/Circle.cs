@@ -22,6 +22,8 @@ public class Circle : MonoBehaviour
     private void Update()
     {
         if(GameManager.Instance.StopPlaying()) return;
+        
+        transform.parent.Translate(Vector2.up * Time.deltaTime);
 
         if (Input.GetMouseButton(0))
         {

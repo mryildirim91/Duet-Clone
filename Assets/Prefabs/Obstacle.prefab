@@ -96,8 +96,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7e4dba4650bb24d9242d45968992bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+  _speed: 1
   _obstacleType: 0
+  _onBecomeInvisible:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 287f82575fce7a7448fdbd596d2f4809, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!70 &5741751414088830218
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

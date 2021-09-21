@@ -8,13 +8,8 @@ public class UIManager : MonoBehaviour
 {
     private int _score;
     [SerializeField] private Text _scoreText;
-
-    private void Start()
-    {
-        InvokeRepeating(nameof(UpdateScore),10,0.5f);
-    }
-
-    private void UpdateScore()
+    
+    public void UpdateScore()
     {
         if(GameManager.Instance.StopPlaying()) return;
         _score++;
