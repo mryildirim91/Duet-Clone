@@ -332,14 +332,14 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.55555624
-        inSlope: 0
-        outSlope: 0
+        time: 0.010894775
+        value: 0.5000028
+        inSlope: -0.2133571
+        outSlope: -0.2133571
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.31933576
       - serializedVersion: 3
         time: 0.86710626
         value: 0.027778625
@@ -938,14 +938,14 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.55555624
-        inSlope: 0
-        outSlope: 0
+        time: 0.010894775
+        value: 0.5000028
+        inSlope: -0.2133571
+        outSlope: -0.2133571
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.31933576
       - serializedVersion: 3
         time: 0.86710626
         value: 0.027778625
